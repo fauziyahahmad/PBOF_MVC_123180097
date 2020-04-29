@@ -59,6 +59,7 @@ public class MhsController {
                 if (input == 0){
                     mhsmodel.setNim(dataTerpilih);
                     mhsdao.Delete(mhsmodel);
+                    
                     String dataMahasiswa[][] = mhsdao.readMahasiswa();
                     mhsview.tabel.setModel((new JTable (dataMahasiswa, mhsview.namaKolom)).getModel());
                 }
